@@ -2,7 +2,19 @@ import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
-    console.log(message);
+    if(message.includes('hello')){
+      actions.handleHello();
+    }
+    if(message.includes('appointment')){
+      actions.appointment();
+    }
+    if(message.includes(2023)){
+      actions.handleDate();
+    }
+    if(message.includes('hi')){
+      actions.handleHi();
+    }
+    
   };
 
   return (
